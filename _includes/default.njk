@@ -8,15 +8,36 @@
     <title>
       {{ title }}
     </title>
-    <link href="{{ '/main.css' | url }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ 'css/main.css' | url }}" rel="stylesheet" media="all" />
   </head>
   <body>
     <h1>Nemo Rathwald</h1>
     <article>
     {{ content | safe }}
     </article>
-    <div class="products">
-    </div>
+    <main>
+    <div class="products"></div>
+    </main>
+    <template id="product">
+      <div class="product">
+        <img src="" alt="" />
+        <h2>name</h2>
+        <p class="description">description</p>
+        <p class="price">price</p>
+        <form action="" method="post">
+          <label for="quantity">Quantity</label>
+          <input
+            type="number"
+            id="quantity"
+            value="1"
+            min="1"
+            max="10"
+          />
+          <input type="hidden" name="sku" value="" />
+          <button type="submit">Buy</button>
+        </form>
+      </div>
+    </template>
     <script type="module">
     import { loadProducts } from './js/load-products.js';
     loadProducts();
