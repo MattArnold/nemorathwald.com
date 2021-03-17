@@ -3,7 +3,7 @@ function createProductFromTemplate(item) {
   const product = template.content.cloneNode(true);
 
   product.querySelector('h2').innerText = item.name;
-  product.querySelector('.description').innerText = item['short-description'];
+  product.querySelector('.description').innerHTML = item['short-description'];
   product.querySelector('[name=sku]').value = item.sku;
   product.querySelector('.price').innerText = Intl.NumberFormat('en-US', {
     style: 'currency',
