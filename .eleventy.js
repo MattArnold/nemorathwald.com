@@ -19,9 +19,16 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: 'utc'
-    }).toFormat("dd-MM-yy");
+      const { DateTime } = require("luxon");
+      if (typeof dateObj === "string") {
+        return DateTime.fromISO(dateObj, { zone: 'utc' }).toFormat("LLLL d, yyyy");
+      }
+      return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLLL d, yyyy");
+    });
+
+  // Add a collection for blog posts
+  eleventyConfig.addCollection('posts', function(collectionApi) {
+    return collectionApi.getFilteredByGlob('src/blog/posts/*.md').sort((a, b) => b.date - a.date);
   });
 
   return {

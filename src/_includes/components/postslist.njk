@@ -4,10 +4,12 @@
       <strong>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </strong>
-      -
+      <span>-</span>
       <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      -
-      <span>{{ post.data.description }}</span>
+      {% if post.data.description %}
+        <span>-</span>
+        <span>{{ post.data.description }}</span>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
