@@ -1,15 +1,20 @@
 <ul>
   {% for post in postslist %}
     <li data-tags="{{ post.data.tags | join(',') }}" data-year="{{ post.date.getFullYear() }}">
-      <strong>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </strong>
-      <span>-</span>
-      <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      {% if post.data.description %}
+      <div>
+        <strong>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </strong>
         <span>-</span>
-        <span>{{ post.data.description }}</span>
-      {% endif %}
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      </div>
+      <div class="excerpt hidden">
+        {% if post.data.description %}
+          {{ post.data.description }}
+        {% else %}
+          {{ post.templateContent | striptags | truncate(160, true, '...') }}
+        {% endif %}
+      </div>
     </li>
   {% endfor %}
 </ul>

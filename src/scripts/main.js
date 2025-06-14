@@ -89,5 +89,19 @@ if (typeof window !== 'undefined') {
         updateQuery();
       });
     });
+
+    // Excerpt toggle logic
+    const toggleExcerptsBtn = document.getElementById('toggle-excerpts-btn');
+    if (toggleExcerptsBtn) {
+      const excerptDivs = document.querySelectorAll('.excerpt');
+      let excerptsVisible = false;
+      toggleExcerptsBtn.addEventListener('click', () => {
+        excerptsVisible = !excerptsVisible;
+        excerptDivs.forEach(div => {
+          div.classList.toggle('hidden', !excerptsVisible);
+        });
+        toggleExcerptsBtn.textContent = excerptsVisible ? 'Hide excerpts' : 'Show excerpts';
+      });
+    }
   });
 }
