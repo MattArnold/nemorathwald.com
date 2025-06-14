@@ -35,9 +35,9 @@
   <body class="dark:bg-zinc-800 dark:text-white">
     {% include "../components/navigation.njk" %}
       <main class="p-12 {% if layout == 'layouts/post.njk' %}blog-entry{% endif %}">
-      <h1 class="text-3xl mb-8">{{title}}</h1>
-      {{ content | safe }}
-    </main>
+        <h1 class="text-3xl mb-8">{{title}}</h1>
+        {{ content | safe }}
+      </main>
     <script src="/assets/main.js"></script>
   </body>
 </html>

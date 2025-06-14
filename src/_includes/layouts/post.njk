@@ -2,5 +2,15 @@
 layout: layouts/base.njk
 ---
 
-<time>{{ date | readableDate }}</time>
-<article>{{ content | safe }}</article>
+<article>
+  <div class="meta-insertion flex items-center mb-8">
+    {% if userpic %}
+      <img src="{{ userpic | replace('../userpics/', '/img/blog/userpics/') }}" alt="Userpic" class="w-12 h-12 rounded-full mr-4" />
+    {% endif %}
+    <div>
+      <div class="author font-semibold text-gray-700 text-sm mb-1">Matt Arnold</div>
+      <div class="date text-xs text-gray-400">{{ date | readableDate }}</div>
+    </div>
+  </div>
+  {{ content | safe }}
+</article>
