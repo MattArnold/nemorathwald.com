@@ -94,14 +94,36 @@ if (typeof window !== 'undefined') {
     const toggleExcerptsBtn = document.getElementById('toggle-excerpts-btn');
     if (toggleExcerptsBtn) {
       const excerptDivs = document.querySelectorAll('.excerpt');
+      const longExcerptDivs = document.querySelectorAll('.long-excerpt');
       let excerptsVisible = false;
       toggleExcerptsBtn.addEventListener('click', () => {
         excerptsVisible = !excerptsVisible;
         excerptDivs.forEach(div => {
           div.classList.toggle('hidden', !excerptsVisible);
         });
+        longExcerptDivs.forEach(div => {
+          div.classList.add('hidden');
+        });
         toggleExcerptsBtn.textContent = excerptsVisible ? 'Hide excerpts' : 'Show excerpts';
       });
     }
+
+    // Per-post excerpt/long-excerpt toggle
+    document.querySelectorAll('.excerpt .more-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const excerptDiv = btn.closest('.excerpt');
+        const longExcerptDiv = excerptDiv.parentElement.querySelector('.long-excerpt');
+        excerptDiv.classList.add('hidden');
+        if (longExcerptDiv) longExcerptDiv.classList.remove('hidden');
+      });
+    });
+    document.querySelectorAll('.long-excerpt .less-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const longExcerptDiv = btn.closest('.long-excerpt');
+        const excerptDiv = longExcerptDiv.parentElement.querySelector('.excerpt');
+        longExcerptDiv.classList.add('hidden');
+        if (excerptDiv) excerptDiv.classList.remove('hidden');
+      });
+    });
   });
 }

@@ -12,8 +12,17 @@
         {% if post.data.description %}
           {{ post.data.description }}
         {% else %}
-          {{ post.templateContent | striptags | truncate(160, true, '...') }}
+          {{ post.templateContent | striptags | truncate(160, true, '...') | safe }}
         {% endif %}
+        <button type="button" class="inline more-btn ml-2 text-blue-600 underline">more</button>
+      </div>
+      <div class="long-excerpt hidden">
+        {% if post.data.description %}
+          {{ post.data.description }}
+        {% else %}
+          {{ post.templateContent | striptags | truncate(500, true, '...') | safe }}
+        {% endif %}
+        <button type="button" class="inline less-btn ml-2 text-blue-600 underline">less</button>
       </div>
     </li>
   {% endfor %}
