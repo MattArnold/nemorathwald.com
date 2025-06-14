@@ -1,6 +1,6 @@
 <ul>
   {% for post in postslist %}
-    <li data-tags="{{ post.data.tags | join(',') }}">
+    <li data-tags="{{ post.data.tags | join(',') }}" data-year="{{ post.date.getFullYear() }}">
       <strong>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </strong>
