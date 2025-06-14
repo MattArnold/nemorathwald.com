@@ -5,7 +5,7 @@ date: 2021-12-08T01:10:00.000Z
 tags:
   - terra ignota
 original_url: 'https://nemorathwald.dreamwidth.org/402521.html'
-userpic: ../userpics/pic#11222592.jpg
+userpic: ../userpics/pic11222592.jpg
 ---
 After reading "The Will To Battle", the third novel in the [Terra Ignota](https://en.wikipedia.org/wiki/Terra_Ignota) series, I started to worry about what was going to be revealed about Utopians in the fourth and final novel, "Perhaps The Stars". I wrote this essay. I didn't want to publish it. It might be spoilers if I guessed correctly. I read "Perhaps The Stars" and the guesses in this essay about what would happen were not correct. Having given myself some weeks to mull it over, I have decided to publish the essay after all. My speculations did not come true. But I can't stop thinking about the themes I discussed here. I wrote the following in 2019. This does have spoilers for the first three novels.
 
