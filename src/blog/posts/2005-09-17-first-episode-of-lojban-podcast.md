@@ -4,6 +4,7 @@ title: First Episode of Lojban Podcast
 date: 2005-09-17T23:48:00.000Z
 tags:
   - lojban
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/83865.html'
 userpic: ''
 ---

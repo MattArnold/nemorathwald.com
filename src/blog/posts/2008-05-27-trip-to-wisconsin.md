@@ -2,7 +2,11 @@
 layout: layouts/post.njk
 title: Trip to Wisconsin
 date: 2008-05-27T04:21:00.000Z
-tags: []
+tags: 
+  - conventions
+  - linux
+  - podcasts
+  - greg egan
 original_url: 'https://nemorathwald.dreamwidth.org/218083.html'
 userpic: ../userpics/_.jpg
 ---

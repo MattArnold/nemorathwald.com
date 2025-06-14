@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: Toad Elevating Moment
 date: 2010-12-16T01:50:00.000Z
-tags: []
+tags: 
+  - podcasts
+  - i3detroit
 original_url: 'https://nemorathwald.dreamwidth.org/346676.html'
 userpic: ../userpics/_.jpg
 ---

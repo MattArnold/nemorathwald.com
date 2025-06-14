@@ -2,7 +2,11 @@
 layout: layouts/post.njk
 title: First Product
 date: 2008-09-08T04:43:00.000Z
-tags: []
+tags: 
+  - shogi
+  - game
+  - games
+  - makers
 original_url: 'https://nemorathwald.dreamwidth.org/236864.html'
 userpic: ../userpics/sinfest_devil_clerk.gif
 ---

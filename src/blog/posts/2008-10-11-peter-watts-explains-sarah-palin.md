@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Peter Watts Explains Sarah Palin
 date: 2008-10-11T18:52:00.000Z
-tags: []
+tags: 
+  - peter watts
 original_url: 'https://nemorathwald.dreamwidth.org/243670.html'
 userpic: ../userpics/_.jpg
 ---

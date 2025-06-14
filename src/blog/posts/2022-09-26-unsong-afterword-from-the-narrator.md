@@ -2,7 +2,12 @@
 layout: layouts/post.njk
 title: 'UNSONG: Afterword From The Narrator'
 date: 2022-09-26T15:17:00.000Z
-tags: []
+tags: 
+  - literature
+  - podcasts
+  - economics
+  - peter watts
+  - cory doctorow
 original_url: 'https://nemorathwald.dreamwidth.org/404330.html'
 userpic: ../userpics/2017.jpg
 ---

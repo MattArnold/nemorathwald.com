@@ -3,13 +3,7 @@ layout: layouts/post.njk
 title: Extensions for Google Chrome
 date: 2010-01-29T23:12:00.000Z
 tags:
-  - google chrome
   - web browser
-  - google wave
-  - google
-  - firefox
-  - mozilla firefox
-  - google reader
 original_url: 'https://nemorathwald.dreamwidth.org/310330.html'
 userpic: ../userpics/_.jpg
 ---

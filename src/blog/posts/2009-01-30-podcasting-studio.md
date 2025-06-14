@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Podcasting Studio
 date: 2009-01-30T13:55:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/263185.html'
 userpic: ../userpics/_.jpg
 ---

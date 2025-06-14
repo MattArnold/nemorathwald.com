@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: Immediate Alert
 date: 2008-03-13T10:42:00.000Z
-tags: []
+tags: 
+  - podcasts
+  - career
+  - job
 original_url: 'https://nemorathwald.dreamwidth.org/207688.html'
 userpic: ../userpics/_.jpg
 ---

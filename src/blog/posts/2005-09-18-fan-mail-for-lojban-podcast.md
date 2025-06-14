@@ -4,6 +4,7 @@ title: Fan Mail for Lojban Podcast
 date: 2005-09-18T15:33:00.000Z
 tags:
   - lojban
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/84006.html'
 userpic: ../userpics/me_Matt.jpg
 ---

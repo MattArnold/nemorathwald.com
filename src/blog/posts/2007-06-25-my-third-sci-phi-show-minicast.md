@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: My Third Sci Phi Show Minicast
 date: 2007-06-25T00:47:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/176087.html'
 userpic: ''
 ---

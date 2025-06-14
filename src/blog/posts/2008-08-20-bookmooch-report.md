@@ -2,7 +2,11 @@
 layout: layouts/post.njk
 title: Bookmooch report
 date: 2008-08-20T17:59:00.000Z
-tags: []
+tags: 
+  - karl schroeder
+  - greg egan
+  - charlie stross
+  - vernor vinge
 original_url: 'https://nemorathwald.dreamwidth.org/232778.html'
 userpic: ../userpics/_.jpg
 ---

@@ -3,7 +3,8 @@ layout: layouts/post.njk
 title: Color Tiles For A Jigsaw-Puzzle Game
 date: 2011-03-01T18:06:00.000Z
 tags:
-  - gam
+  - game
+  - makers
 original_url: 'https://nemorathwald.dreamwidth.org/355493.html'
 userpic: ../userpics/_.jpg
 ---

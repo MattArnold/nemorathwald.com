@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: We Interrupt This Blog To Sell You Stuff
 date: 2009-12-01T01:19:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/304186.html'
 userpic: ''
 ---

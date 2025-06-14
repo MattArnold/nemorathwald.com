@@ -7,6 +7,7 @@ tags:
   - futurics
   - literature
   - science fiction
+  - karl schroeder
 original_url: 'https://nemorathwald.dreamwidth.org/40486.html'
 userpic: ../userpics/Matt_4.jpg
 ---

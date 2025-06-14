@@ -7,6 +7,7 @@ tags:
   - sf
   - charlie stross
   - greg egan
+  - karl schroeder
   - transhumanism
 original_url: 'https://nemorathwald.dreamwidth.org/107320.html'
 userpic: ../userpics/Matt_4.jpg

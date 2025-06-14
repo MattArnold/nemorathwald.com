@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Podcast Decisions!
 date: 2006-10-26T17:30:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/149018.html'
 userpic: ../userpics/_.jpg
 ---

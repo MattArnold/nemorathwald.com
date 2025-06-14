@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Free Karl Schroeder Novels
 date: 2008-04-29T11:23:00.000Z
-tags: []
+tags: 
+  - karl schroeder
 original_url: 'https://nemorathwald.dreamwidth.org/215365.html'
 userpic: ../userpics/_.jpg
 ---

@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: When To Be Impressed By Antiquity
 date: 2021-11-17T20:13:00.000Z
-tags: []
+tags: 
+  - religion
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/402001.html'
 userpic: ../userpics/2017.jpg
 ---

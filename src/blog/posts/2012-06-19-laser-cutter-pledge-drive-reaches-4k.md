@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: Laser Cutter Pledge Drive Reaches $4K
 date: 2012-06-19T11:47:00.000Z
-tags: []
+tags: 
+  - i3detroit
+  - makers
 original_url: 'https://nemorathwald.dreamwidth.org/387407.html'
 userpic: ../userpics/_.jpg
 ---

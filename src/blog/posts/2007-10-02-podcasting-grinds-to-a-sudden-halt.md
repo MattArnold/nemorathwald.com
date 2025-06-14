@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Podcasting Grinds to a Sudden Halt
 date: 2007-10-02T02:25:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/188310.html'
 userpic: ../userpics/sinfest_devil_clerk.gif
 ---

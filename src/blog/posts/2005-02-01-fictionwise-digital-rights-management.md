@@ -5,6 +5,7 @@ date: 2005-02-01T00:21:00.000Z
 tags:
   - literature
   - cory doctorow
+  - karl schroeder
   - science fiction
   - money
   - sf

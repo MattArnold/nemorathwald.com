@@ -4,6 +4,7 @@ title: Climate Change
 date: 2006-06-15T22:47:00.000Z
 tags:
   - politics
+  - economics
 original_url: 'https://nemorathwald.dreamwidth.org/128212.html'
 userpic: ../userpics/_.jpg
 ---

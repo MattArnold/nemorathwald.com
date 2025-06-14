@@ -10,7 +10,6 @@ tags:
   - robots
   - technology
   - fun
-  - cockroach
   - articles
 original_url: 'https://nemorathwald.dreamwidth.org/62111.html'
 userpic: ../userpics/_.jpg

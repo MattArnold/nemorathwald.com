@@ -12,8 +12,8 @@ tags:
   - science fiction
   - sf
   - charlie stross
+  - karl schroeder
   - penguicon
-  - conversation
 original_url: 'https://nemorathwald.dreamwidth.org/90399.html'
 userpic: ../userpics/_.jpg
 ---

@@ -3,7 +3,6 @@ layout: layouts/post.njk
 title: Game Design
 date: 2005-06-14T13:33:00.000Z
 tags:
-  - nintendo
   - shogi
   - game
   - games

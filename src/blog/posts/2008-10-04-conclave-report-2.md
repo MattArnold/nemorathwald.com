@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: ConClave Report 2
 date: 2008-10-04T14:13:00.000Z
-tags: []
+tags: 
+  - conclave
+  - conventions
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/241479.html'
 userpic: ../userpics/_.jpg
 ---

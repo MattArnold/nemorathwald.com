@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: 'Peter Watt''s Rifters and RPG "Rifter": Two Different Things'
 date: 2008-05-17T13:51:00.000Z
-tags: []
+tags: 
+  - peter watts
 original_url: 'https://nemorathwald.dreamwidth.org/217465.html'
 userpic: ../userpics/I'm_losin'_it.jpg
 ---

@@ -4,6 +4,7 @@ title: Prediction Markets
 date: 2008-01-02T22:44:00.000Z
 tags:
   - politics
+  - economics
 original_url: 'https://nemorathwald.dreamwidth.org/198811.html'
 userpic: ''
 ---

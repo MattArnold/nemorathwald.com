@@ -7,6 +7,7 @@ tags:
   - family
   - relationships
   - urban tribes
+  - economics
 original_url: 'https://nemorathwald.dreamwidth.org/37495.html'
 userpic: ''
 ---

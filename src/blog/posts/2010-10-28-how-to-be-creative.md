@@ -4,6 +4,7 @@ title: How To Be Creative
 date: 2010-10-28T18:11:00.000Z
 tags:
   - creativity
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/336620.html'
 userpic: ../userpics/_.jpg
 ---

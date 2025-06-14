@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: Podcasting Presentation at ConClave
 date: 2007-10-12T12:27:00.000Z
-tags: []
+tags: 
+  - podcasts
+  - conclave
+  - conventions
 original_url: 'https://nemorathwald.dreamwidth.org/190328.html'
 userpic: ../userpics/_.jpg
 ---

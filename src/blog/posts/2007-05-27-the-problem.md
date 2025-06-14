@@ -6,10 +6,23 @@ tags:
   - job
   - introspection
   - career
+  - economics
 original_url: 'https://nemorathwald.dreamwidth.org/173633.html'
 userpic: ../userpics/_.jpg
 ---
-Summary: - There is a problem of life strategy. - I am a very open person and I love talking to people. - So I talk to people about the problem of life strategy. - I am argumentative. It takes a lot for me to convince myself of anything, so my standards are somewhat high. - I begin to realize that as a consequence of this, I should probably keep my thoughts to myself. - I hate not talking about things, so this is another problem.
+Summary: 
+
+- There is a problem of life strategy. 
+
+- I am a very open person and I love talking to people. 
+
+- So I talk to people about the problem of life strategy. 
+
+- I am argumentative. It takes a lot for me to convince myself of anything, so my standards are somewhat high. 
+
+- I begin to realize that as a consequence of this, I should probably keep my thoughts to myself. 
+
+- I hate not talking about things, so this is another problem.
 
 * * *
 

@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: BookMooch update
 date: 2007-09-16T12:15:00.000Z
-tags: []
+tags: 
+  - karl schroeder
+  - greg egan
 original_url: 'https://nemorathwald.dreamwidth.org/186629.html'
 userpic: ../userpics/_.jpg
 ---

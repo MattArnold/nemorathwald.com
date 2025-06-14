@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Lojban Fest @ Philcon 2006
 date: 2006-08-25T20:35:00.000Z
-tags: []
+tags: 
+  - lojban
 original_url: 'https://nemorathwald.dreamwidth.org/138514.html'
 userpic: ../userpics/_.jpg
 ---

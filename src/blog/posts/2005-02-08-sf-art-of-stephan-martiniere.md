@@ -5,6 +5,7 @@ date: 2005-02-08T15:42:00.000Z
 tags:
   - science fiction
   - sf
+  - karl schroeder
 original_url: 'https://nemorathwald.dreamwidth.org/42443.html'
 userpic: ''
 ---

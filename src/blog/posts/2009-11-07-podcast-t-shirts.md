@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Podcast T-shirts
 date: 2009-11-07T03:40:00.000Z
 tags:
-  - poddisc.com
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/301534.html'
 userpic: ''
 ---

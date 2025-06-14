@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: 'Bre Pettis: The Cult of Done'
 date: 2011-05-17T15:11:00.000Z
-tags: []
+tags: 
+  - makers
+  - karl schroeder
 original_url: 'https://nemorathwald.dreamwidth.org/367360.html'
 userpic: ../userpics/_.jpg
 ---

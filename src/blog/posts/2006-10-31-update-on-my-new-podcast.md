@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Update On My New Podcast
 date: 2006-10-31T00:07:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/149709.html'
 userpic: ../userpics/_.jpg
 ---

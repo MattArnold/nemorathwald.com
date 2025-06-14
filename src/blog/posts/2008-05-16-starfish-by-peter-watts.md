@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: 'Starfish, by Peter Watts'
 date: 2008-05-16T10:20:00.000Z
-tags: []
+tags: 
+  - peter watts
+  - karl schroeder
 original_url: 'https://nemorathwald.dreamwidth.org/217118.html'
 userpic: ''
 ---

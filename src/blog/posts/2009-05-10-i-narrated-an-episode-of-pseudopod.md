@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: I Narrated An Episode of Pseudopod
 date: 2009-05-10T23:15:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/279327.html'
 userpic: ../userpics/sinfest_devil_clerk.gif
 ---

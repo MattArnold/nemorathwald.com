@@ -11,6 +11,7 @@ tags:
   - introspection
   - technology
   - authoritarianism
+  - economics
 original_url: 'https://nemorathwald.dreamwidth.org/45139.html'
 userpic: ../userpics/Matt_4.jpg
 ---

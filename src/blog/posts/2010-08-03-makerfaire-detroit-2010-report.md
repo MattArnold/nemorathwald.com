@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: MakerFaire Detroit 2010 Report
 date: 2010-08-03T20:25:00.000Z
-tags: []
+tags: 
+  - makerfaire
+  - makers
 original_url: 'https://nemorathwald.dreamwidth.org/328779.html'
 userpic: ../userpics/_.jpg
 ---

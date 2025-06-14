@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: 'Writing Excuses: Season One'
 date: 2008-10-02T16:42:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/240566.html'
 userpic: ../userpics/I'm_losin'_it.jpg
 ---

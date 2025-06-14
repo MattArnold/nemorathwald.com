@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Blindsight Voted Fourth Best SFF of the Decade
 date: 2011-03-03T19:58:00.000Z
-tags: []
+tags: 
+  - peter watts
 original_url: 'https://nemorathwald.dreamwidth.org/356235.html'
 userpic: ''
 ---

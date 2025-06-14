@@ -5,7 +5,6 @@ date: 2009-01-15T22:19:00.000Z
 tags:
   - python
   - hacking
-  - php
 original_url: 'https://nemorathwald.dreamwidth.org/258864.html'
 userpic: ../userpics/_.jpg
 ---

@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: The Sci Phi Show
 date: 2007-05-23T03:45:00.000Z
-tags: []
+tags: 
+  - podcasts
+  - science fiction
 original_url: 'https://nemorathwald.dreamwidth.org/173111.html'
 userpic: ../userpics/_.jpg
 ---

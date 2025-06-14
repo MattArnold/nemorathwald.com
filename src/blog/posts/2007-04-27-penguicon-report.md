@@ -2,7 +2,9 @@
 layout: layouts/post.njk
 title: Penguicon Report
 date: 2007-04-27T13:55:00.000Z
-tags: []
+tags: 
+  - penguicon
+  - conventions
 original_url: 'https://nemorathwald.dreamwidth.org/169195.html'
 userpic: ''
 ---

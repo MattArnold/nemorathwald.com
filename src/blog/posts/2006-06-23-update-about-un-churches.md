@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: Update About Un-Churches
 date: 2006-06-23T18:01:00.000Z
-tags: []
+tags: 
+  - religion
+  - humanism
+  - karl schroeder
 original_url: 'https://nemorathwald.dreamwidth.org/128839.html'
 userpic: ../userpics/Matt_4.jpg
 ---

@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: My "Morality As Software" episode on The Sci Phi Show
 date: 2007-06-08T03:55:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/174251.html'
 userpic: ../userpics/_.jpg
 ---

@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: A Christmas Laugh
 date: 2010-12-14T03:05:00.000Z
-tags: []
+tags: 
+  - makers
 original_url: 'https://nemorathwald.dreamwidth.org/346225.html'
 userpic: ../userpics/sinfest_devil_clerk.gif
 ---

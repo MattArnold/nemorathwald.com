@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Embodied Intelligence Challenge
 date: 2007-12-22T20:01:00.000Z
-tags: []
+tags: 
+  - podcasts
 original_url: 'https://nemorathwald.dreamwidth.org/196837.html'
 userpic: ../userpics/_.jpg
 ---
