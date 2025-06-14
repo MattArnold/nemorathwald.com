@@ -6,11 +6,11 @@ tags: []
 original_url: 'https://nemorathwald.dreamwidth.org/405149.html'
 userpic: ../userpics/2017.jpg
 ---
-_How to define autism and why it matters
+_How to define autism and why it matters_
 
 * * *
 
-_I've centered my life around nerds for decades. Many of them sit in a room full of other awkward nerds, feeling secretly out of place like they don't belong, & somehow assume they're the only one who is secretly uncomfortable. The term "neurotypical" experienced meaning-drift, until it became worse than useless, just like the word "planet". It needs [ontological remodeling](https://metarationality.com/remodeling).
+I've centered my life around nerds for decades. Many of them sit in a room full of other awkward nerds, feeling secretly out of place like they don't belong, & somehow assume they're the only one who is secretly uncomfortable. The term "neurotypical" experienced meaning-drift, until it became worse than useless, just like the word "planet". It needs [ontological remodeling](https://metarationality.com/remodeling).
 
 There's a lot of equivocation on this. So let's define terms. "Neurotypical" means "not neurodivergent".
 
