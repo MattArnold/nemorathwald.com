@@ -53,8 +53,12 @@ function fetchHtml(url) {
 // Main async function
 (async () => {
   let updated = false;
+  let notfound = commenters.notfound || [];
+  const notfoundSet = new Set(notfound);
+
   for (const extId of foundExtIds) {
-    if (commenters[extId]) continue;
+    // Only fetch if extId is not already a key in commenters.yml (excluding 'notfound' key)
+    if (Object.prototype.hasOwnProperty.call(commenters, extId)) continue;
     // Convert ext_25108 to ext-25108.dreamwidth.org
     const subdomain = extId.replace('_', '-');
     const url = `https://${subdomain}.dreamwidth.org/`;
@@ -78,12 +82,35 @@ function fetchHtml(url) {
         updated = true;
         console.log(`Mapped ${extId} → ${foundLJ}`);
       } else {
-        console.log(`Could not find LiveJournal username for ${extId}`);
+        // Fallback: Look for OpenID message with a name after 'at http://'
+        const bodyText = dom.window.document.body.textContent || '';
+        const openidMatch = bodyText.match(/at http:\/\/(.*?)\//);
+        if (openidMatch && openidMatch[1]) {
+          const openidName = openidMatch[1].trim();
+          commenters[extId] = openidName;
+          updated = true;
+          console.log(`Mapped ${extId} → ${openidName} (from OpenID message)`);
+        } else {
+          if (!notfoundSet.has(extId)) {
+            notfoundSet.add(extId);
+            console.log(`Could not find LiveJournal username or OpenID name for ${extId}, adding to notfound`);
+            updated = true;
+          }
+        }
       }
     } catch (e) {
+      if (!notfoundSet.has(extId)) {
+        notfoundSet.add(extId);
+        console.log(`Error fetching ${url}, adding ${extId} to notfound`);
+        updated = true;
+      }
       console.error(`Error fetching ${url}:`, e);
     }
   }
+
+  // Update notfound list in commenters object
+  commenters.notfound = Array.from(notfoundSet).sort();
+
   if (updated) {
     fs.writeFileSync(commentersYmlPath, yaml.dump(commenters));
     console.log('commenters.yml updated.');

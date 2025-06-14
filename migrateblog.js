@@ -5,8 +5,10 @@ const { JSDOM } = require('jsdom');
 const matter = require('gray-matter');
 const yaml = require('js-yaml');
 
-const entriesDir = path.join(__dirname, '../dreamwidth/entries');
-const outputDir = path.join(__dirname, '../src/blog/posts');
+// Use correct path for entriesDir and preDir
+const entriesDir = path.resolve(__dirname, 'dreamwidth/entries');
+const preDir = path.resolve(__dirname, 'preprocessed');
+const outputDir = path.resolve(__dirname, 'src/blog/posts');
 
 const turndownService = new TurndownService();
 
@@ -16,10 +18,12 @@ if (fs.existsSync(commentersYmlPath)) {
   commenters = yaml.load(fs.readFileSync(commentersYmlPath, 'utf8')) || {};
 }
 
+// Use preprocessed if available
 fs.readdirSync(entriesDir).forEach(file => {
   if (!file.endsWith('.html')) return;
-
-  const html = fs.readFileSync(path.join(entriesDir, file), 'utf8');
+  const preFile = path.join(preDir, file);
+  const entryFile = fs.existsSync(preFile) ? preFile : path.join(entriesDir, file);
+  const html = fs.readFileSync(entryFile, 'utf8');
   const dom = new JSDOM(html);
   const document = dom.window.document;
 
@@ -40,12 +44,35 @@ fs.readdirSync(entriesDir).forEach(file => {
   const original_url = document.querySelector('li.entry-permalink a')?.getAttribute('href') || '';
   // Extract userpic src if present
   const userpic = document.querySelector('div.userpic img')?.getAttribute('src') || '';
-  // Extract the article body
+
+  // Replace <div><strong>...</strong></div> and <p><strong>...</strong></p> with <h2>...</h2> in the DOM before extracting the article body
+  ['div', 'p'].forEach(tag => {
+    Array.from(document.querySelectorAll(tag)).forEach(parent => {
+      if (
+        parent.children.length === 1 &&
+        parent.children[0].tagName === 'STRONG' &&
+        Array.from(parent.childNodes).every(node =>
+          node.nodeType === 3 ? /^\s*$/.test(node.textContent) : node === parent.children[0]
+        )
+      ) {
+        const h2 = document.createElement('h2');
+        h2.innerHTML = parent.children[0].innerHTML;
+        parent.parentNode.replaceChild(h2, parent);
+      }
+    });
+  });
+
+  // Remove all <br> tags in .entry-content (do not replace with anything)
+  Array.from(document.querySelectorAll('.entry-content br')).forEach(br => {
+    br.parentNode.removeChild(br);
+  });
+
+  // Extract the article body AFTER all replacements
   const body = document.querySelector('.entry-content')?.innerHTML || '';
 
   const markdown = turndownService.turndown(body);
 
-  // --- Extract and convert comments ---
+  // --- Extract and convert comments (tree, robust) ---
   function extractComments() {
     const commentNodes = Array.from(document.querySelectorAll('div.dwexpcomment'));
     // Build a map of comment id to comment data
@@ -60,22 +87,59 @@ fs.readdirSync(entriesDir).forEach(file => {
         authorText = commenters[authorText];
       }
       const author = authorEl ? `[${authorText}](${authorEl.getAttribute('href')})` : 'Anonymous';
-      // Extract comment date
-      const date = header ? new Date(header.getAttribute('data-time')) : new Date();
-      // Extract comment content
-      const content = node.querySelector('.entry-content') ? turndownService.turndown(node.querySelector('.entry-content').innerHTML) : '';
-      // Add comment to the comments object
-      comments[id] = { author, date, content };
+      const date = header?.querySelector('.datetime span:last-child')?.textContent.trim() || '';
+      const title = header?.querySelector('.comment-title')?.textContent.trim() || '';
+      const bodyHtml = node.querySelector('.comment-content')?.innerHTML || '';
+      const bodyMd = turndownService.turndown(bodyHtml);
+      // Find parent by traversing up to closest .dwexpcomment
+      let parent = null;
+      let parentNode = node.parentElement;
+      while (parentNode) {
+        if (parentNode.classList && parentNode.classList.contains('dwexpcomment')) {
+          parent = parentNode.id;
+          break;
+        }
+        parentNode = parentNode.parentElement;
+      }
+      comments[id] = { id, author, date, title, bodyMd, parent, children: [] };
     });
-    return comments;
+    // Build tree
+    Object.values(comments).forEach(comment => {
+      if (comment.parent && comments[comment.parent]) {
+        comments[comment.parent].children.push(comment);
+      }
+    });
+    // Get top-level comments
+    return Object.values(comments).filter(c => !c.parent);
   }
 
-  const comments = extractComments();
+  function renderCommentsMd(comments) {
+    let md = '';
+    comments.forEach((comment, idx) => {
+      if (idx > 0) md += '\n\n---\n\n';
+      md += `**${comment.author}** on ${comment.date}`;
+      if (comment.title) md += ` — *${comment.title}*`;
+      md += `\n\n${comment.bodyMd}`;
+      if (comment.children.length > 0) {
+        // Render children as flat, separated by ---
+        md += '\n\n---\n\n' + renderCommentsMd(comment.children).replace(/^---\n\n/, '');
+      }
+    });
+    return md;
+  }
 
-  const mdWithFrontMatter = matter.stringify(markdown, {
+  const commentsTree = extractComments();
+  let commentsMd = '';
+  // Always add Comments section, always with a break and horizontal rule after the header
+  if (commentsTree.length > 0) {
+    commentsMd = '\n\n## Comments\n\n---\n\n' + renderCommentsMd(commentsTree);
+  } else {
+    commentsMd = '\n\n## Comments\n\n---\n\nnone';
+  }
+
+  const mdWithFrontMatter = matter.stringify(markdown + commentsMd, {
     layout: 'layouts/post.njk',
     title,
-    // Write date as a Date object so gray-matter serializes it unquoted
     date: new Date(date),
     tags,
     original_url,
