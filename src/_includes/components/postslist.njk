@@ -1,6 +1,6 @@
 <ul>
   {% for post in postslist %}
-    <li>
+    <li data-tags="{{ post.data.tags | join(',') }}">
       <strong>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </strong>

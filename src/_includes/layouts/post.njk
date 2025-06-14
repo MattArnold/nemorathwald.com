@@ -18,7 +18,7 @@ layout: layouts/base.njk
       <span class="font-semibold">Tags:</span>
       <ul class="inline">
         {% for tag in mytags %}
-          <li class="inline mr-2"><a href="/blog/tags/{{ tag | url }}" class="underline hover:text-blue-600">{{ tag }}</a></li>
+          <li class="inline mr-2"><a href="/blog/?tag={{ tag | url }}" class="underline hover:text-blue-600">{{ tag }}</a></li>
         {% endfor %}
       </ul>
     </div>
