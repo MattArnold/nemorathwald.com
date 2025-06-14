@@ -7,4 +7,17 @@ eleventyNavigation:
   order: 2
 ---
 {% set postslist = collections.posts %}
+{% set allTags = collections.allTags %}
+
+{% if allTags and allTags.length %}
+  <div class="mb-8">
+    <h2 class="font-semibold text-lg mb-2">All Tags</h2>
+    <ul class="flex flex-wrap gap-2">
+      {% for tag in allTags %}
+        <li><a href="/blog/tags/{{ tag | url }}" class="px-2 py-1 bg-gray-200 rounded hover:bg-blue-200">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
 {% include "components/postslist.njk" %}
