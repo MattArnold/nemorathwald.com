@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Help with the Penguicon schedule
 date: 2011-03-31T16:47:00.000Z
-tags: []
+tags: 
+  - penguicon
 original_url: 'https://nemorathwald.dreamwidth.org/359046.html'
 userpic: ../userpics/_.jpg
 ---

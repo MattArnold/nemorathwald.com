@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Extensions for Google Chrome
 date: 2010-01-29T23:12:00.000Z
 tags:
-  - web browser
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/310330.html'
 userpic: ../userpics/_.jpg
 ---

@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: My Project
 date: 2011-08-12T21:23:00.000Z
-tags: []
+tags: 
+  - technology
+  - career
+  - job
 original_url: 'https://nemorathwald.dreamwidth.org/375019.html'
 userpic: ../userpics/_.jpg
 ---

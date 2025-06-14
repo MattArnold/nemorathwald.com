@@ -2,8 +2,7 @@
 layout: layouts/post.njk
 title: All True Wayism
 date: 2008-03-23T10:30:00.000Z
-tags:
-  - test-tag!
+tags: []
 original_url: 'https://nemorathwald.dreamwidth.org/210075.html'
 userpic: ../userpics/_.jpg
 ---

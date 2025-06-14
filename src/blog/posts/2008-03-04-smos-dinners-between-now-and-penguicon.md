@@ -4,7 +4,6 @@ title: SMOS Dinners between now and Penguicon
 date: 2008-03-04T02:44:00.000Z
 tags:
   - penguicon
-  - smos
 original_url: 'https://nemorathwald.dreamwidth.org/206460.html'
 userpic: ../userpics/_.jpg
 ---

@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: Metaplace
 date: 2008-11-02T19:10:00.000Z
-tags: []
+tags: 
+  - browser
+  - game
+  - gaming
 original_url: 'https://nemorathwald.dreamwidth.org/245996.html'
 userpic: ../userpics/_.jpg
 ---

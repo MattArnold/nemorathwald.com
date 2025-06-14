@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Firefox Day
 date: 2006-07-17T14:56:00.000Z
-tags: []
+tags: 
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/132045.html'
 userpic: ../userpics/_.jpg
 ---

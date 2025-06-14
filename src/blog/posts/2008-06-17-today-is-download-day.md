@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Today Is Download Day!
 date: 2008-06-17T19:59:00.000Z
-tags: []
+tags: 
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/220612.html'
 userpic: ../userpics/_.jpg
 ---

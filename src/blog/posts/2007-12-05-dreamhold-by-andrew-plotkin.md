@@ -6,6 +6,7 @@ tags:
   - software
   - interactive fiction
   - game
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/195117.html'
 userpic: ../userpics/_.jpg
 ---

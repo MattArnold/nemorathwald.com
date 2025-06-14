@@ -3,7 +3,6 @@ layout: layouts/post.njk
 title: 'The Inaugural Address and Star Trek: Insurrection'
 date: 2009-01-21T01:19:00.000Z
 tags:
-  - west wing
   - sf
   - politics
 original_url: 'https://nemorathwald.dreamwidth.org/261034.html'

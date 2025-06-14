@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: Webcomic About Google's New Browser
 date: 2008-09-02T20:47:00.000Z
-tags: []
+tags: 
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/236270.html'
 userpic: ../userpics/_.jpg
 ---

@@ -2,7 +2,10 @@
 layout: layouts/post.njk
 title: Making A Good-Looking Favicon
 date: 2015-10-18T17:35:00.000Z
-tags: []
+tags: 
+  - art
+  - web
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/395997.html'
 userpic: ../userpics/_.jpg
 ---

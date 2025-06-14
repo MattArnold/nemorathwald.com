@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 title: News About Interactive Fiction
 date: 2010-09-07T05:02:00.000Z
-tags: []
+tags: 
+  - browser
 original_url: 'https://nemorathwald.dreamwidth.org/331933.html'
 userpic: ../userpics/_.jpg
 ---

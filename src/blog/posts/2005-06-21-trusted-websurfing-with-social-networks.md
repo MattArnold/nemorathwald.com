@@ -9,7 +9,6 @@ tags:
   - web
   - www
   - internet
-  - rss
   - open source
 original_url: 'https://nemorathwald.dreamwidth.org/63001.html'
 userpic: ''
