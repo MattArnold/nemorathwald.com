@@ -111,13 +111,11 @@ if (typeof window !== 'undefined') {
     tagButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const tag = btn.getAttribute('data-tag');
-        console.log('[TAG BUTTON CLICKED]', tag, 'activeTag before:', activeTag);
         if (activeTag === tag) {
           activeTag = null;
         } else {
           activeTag = tag;
         }
-        console.log('activeTag after:', activeTag);
         filterPostsAndUpdateButtons();
         updateQuery();
       });
@@ -125,13 +123,11 @@ if (typeof window !== 'undefined') {
     yearButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const year = btn.getAttribute('data-year');
-        console.log('[YEAR BUTTON CLICKED]', year, 'activeYear before:', activeYear);
         if (activeYear === year) {
           activeYear = null;
         } else {
           activeYear = year;
         }
-        console.log('activeYear after:', activeYear);
         filterPostsAndUpdateButtons();
         updateQuery();
       });
