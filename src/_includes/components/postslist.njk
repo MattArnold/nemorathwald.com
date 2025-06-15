@@ -1,3 +1,7 @@
+<div id="clear-filters" class="hidden mt-4">
+  <button id="clear-year-btn" class="hidden px-4 py-2 bg-gray-200 rounded mr-2"></button>
+  <button id="clear-tag-btn" class="hidden px-4 py-2 bg-gray-200 rounded"></button>
+</div>
 <ul>
   {% for post in postslist %}
     <li data-tags="{{ post.data.tags | join(',') }}" data-year="{{ post.date.getFullYear() }}">

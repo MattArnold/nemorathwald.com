@@ -65,29 +65,89 @@ if (typeof window !== 'undefined') {
     if (initialYear) activeYear = initialYear;
     if (activeTag || activeYear) filterPosts();
 
+    // --- Clear filters button logic ---
+    const clearFiltersDiv = document.getElementById('clear-filters');
+    const clearYearBtn = document.getElementById('clear-year-btn');
+    const clearTagBtn = document.getElementById('clear-tag-btn');
+
+    function updateClearButtons() {
+      if (!clearYearBtn || !clearTagBtn || !clearFiltersDiv) {
+        console.warn('[Filter UI] Missing clear filter button(s) in DOM:', {
+          clearYearBtn, clearTagBtn, clearFiltersDiv
+        });
+        return;
+      }
+      // Show clear buttons if a filter is active, regardless of post visibility
+      if (activeYear) {
+        clearYearBtn.textContent = `Clear ${activeYear}`;
+        clearYearBtn.classList.remove('hidden');
+      } else {
+        clearYearBtn.classList.add('hidden');
+      }
+      if (activeTag) {
+        clearTagBtn.textContent = `Clear ${activeTag}`;
+        clearTagBtn.classList.remove('hidden');
+      } else {
+        clearTagBtn.classList.add('hidden');
+      }
+      // Always show the clear-filters div if any filter is active, even if no posts are visible
+      if (activeTag || activeYear) {
+        clearFiltersDiv.classList.remove('hidden');
+      } else {
+        clearFiltersDiv.classList.add('hidden');
+      }
+    }
+
+    // Update clear buttons on filter change
+    function filterPostsAndUpdateButtons() {
+      filterPosts();
+      updateClearButtons();
+    }
+
+    // Initial state
+    updateClearButtons();
+
+    // Patch filter event handlers to update clear buttons
     tagButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const tag = btn.getAttribute('data-tag');
+        console.log('[TAG BUTTON CLICKED]', tag, 'activeTag before:', activeTag);
         if (activeTag === tag) {
           activeTag = null;
         } else {
           activeTag = tag;
         }
-        filterPosts();
+        console.log('activeTag after:', activeTag);
+        filterPostsAndUpdateButtons();
         updateQuery();
       });
     });
     yearButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const year = btn.getAttribute('data-year');
+        console.log('[YEAR BUTTON CLICKED]', year, 'activeYear before:', activeYear);
         if (activeYear === year) {
           activeYear = null;
         } else {
           activeYear = year;
         }
-        filterPosts();
+        console.log('activeYear after:', activeYear);
+        filterPostsAndUpdateButtons();
         updateQuery();
       });
+    });
+
+    // Clear year
+    clearYearBtn.addEventListener('click', () => {
+      activeYear = null;
+      filterPostsAndUpdateButtons();
+      updateQuery();
+    });
+    // Clear tag
+    clearTagBtn.addEventListener('click', () => {
+      activeTag = null;
+      filterPostsAndUpdateButtons();
+      updateQuery();
     });
 
     // Excerpt toggle logic
