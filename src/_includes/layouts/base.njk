@@ -1,22 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
-    <title>{{ title }}</title>
+    <title>{{ title }}{% if title != 'Nemorathwald' %} · Nemorathwald{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cabinet of curiosities by Matt Arnold — maker, thinker, digital craftsperson">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="/assets/main.css" />
 
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <script>  
-      // Remove this script if you don't need the dark mode toggle  
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      // Dark mode toggle
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark')
-        
       } else {
         document.documentElement.classList.remove('dark')
       }
@@ -38,12 +42,18 @@
     </script>
 
   </head>
-  <body class="dark:bg-zinc-800 dark:text-white">
+  <body class="font-sans bg-parchment-50 text-gray-800 dark:bg-midnight-950 dark:text-parchment-100 transition-colors duration-300">
     {% include "../components/navigation.njk" %}
-      <main class="p-12 {% if layout == 'layouts/post.njk' %}blog-entry{% endif %}">
-        <h1 class="text-3xl mb-8">{{title}}</h1>
+    <main class="{% if layout == 'layouts/post.njk' %}blog-entry{% else %}px-6 lg:px-12{% endif %}">
+      {% if layout != 'layouts/post.njk' and title != 'Home' %}
+        <header class="max-w-4xl mx-auto pt-12 pb-8">
+          <h1 class="font-display text-4xl lg:text-5xl font-semibold text-gray-800 dark:text-parchment-100 mb-4">{{title}}</h1>
+        </header>
+      {% endif %}
+      <div class="{% if layout != 'layouts/post.njk' %}max-w-4xl mx-auto{% endif %}">
         {{ content | safe }}
-      </main>
+      </div>
+    </main>
     <script src="/assets/main.js"></script>
   </body>
 </html>

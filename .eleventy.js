@@ -4,7 +4,11 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/img');
+  eleventyConfig.addPassthroughCopy('favicon.png');
+  eleventyConfig.addPassthroughCopy('favicon-16.png');
+  eleventyConfig.addPassthroughCopy('favicon-32.png');
+  eleventyConfig.addPassthroughCopy('favicon.svg');
 
 
   const {

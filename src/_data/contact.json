@@ -1,20 +1,25 @@
 {
-    "items": [
-        {
-            "name": "test@example.com",
-            "link": "mailto:test@example.com"
-        },
-        {
-            "name": "Twitter",
-            "link": "https://twitter.com/…"
-        },
-        {
-            "name": "GitHub",
-            "link": "https://github.com/…"
-        },
-        {
-            "name": "CodePen",
-            "link": "https://codepen.io/…"
-        }
-    ]
+  "email": "matt@nemorathwald.com",
+  "social": [
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/nemorathwald",
+      "icon": "twitter"
+    },
+    {
+      "name": "Mastodon",
+      "url": "https://social.coop/@nemorathwald",
+      "icon": "mastodon"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/nemorathwald",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/nemorathwald",
+      "icon": "linkedin"
+    }
+  ]
 }

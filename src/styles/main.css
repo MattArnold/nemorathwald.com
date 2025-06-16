@@ -2,59 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Typography and Colors */
 body {
-  font-family: 'Source Serif Pro', Georgia, serif;
+  font-family: 'EB Garamond', Georgia, serif;
   line-height: 1.6;
-  font-size: 17px;
-  color: #2d2d2d;
-  background: #fdfdfd;
+  font-size: 18px;
 }
 
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'EB Garamond', Georgia, serif;
   font-weight: 600;
+  line-height: 1.2;
 }
 
-main {
-  @apply container mx-auto px-4;
-}
-
-h1, h2, h3, h4 {
-  @apply font-bold;
-}
-
+/* Enhanced Typography Hierarchy */
 h1 {
-  @apply text-2xl;
+  @apply text-3xl lg:text-4xl font-semibold mb-6;
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-2xl lg:text-3xl font-semibold mb-4;
 }
 
 h3 {
-  @apply text-lg;
+  @apply text-xl lg:text-2xl font-semibold mb-3;
 }
 
 h4 {
-  @apply text-base;
+  @apply text-lg lg:text-xl font-semibold mb-3;
 }
 
-h1, h2 {
-  margin-top: 2rem;
+/* Improved spacing and readability */
+p, blockquote, ul, ol {
+  @apply mb-6 leading-relaxed;
 }
 
-h1, h2, h3, h4, p {
-  margin-bottom: 1rem;
-}
-
+/* Enhanced links with prism colors */
 a {
-  @apply underline;
-  color: #457b9d;
+  @apply text-burnt-orange-600 dark:text-burnt-orange-400 hover:text-burnt-orange-700 dark:hover:text-burnt-orange-300 underline decoration-2 underline-offset-2 transition-colors duration-200;
 }
 
+/* List styling */
 li:not(.inline) {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  @apply ml-6 mb-3;
 }
 
 ol li {
@@ -65,176 +55,179 @@ ul li {
   list-style-type: disc;
 }
 
-li img {
-  width: 100px;
-  float: left;
-  margin-right: 10px;
+/* Enhanced blockquotes */
+blockquote {
+  @apply border-l-4 border-moss-300 dark:border-moss-600 pl-6 py-2 italic text-gray-700 dark:text-parchment-200 bg-moss-50/30 dark:bg-moss-900/20 rounded-r-lg;
 }
 
+/* Media elements */
 img, svg, video, canvas, audio, iframe, embed, object {
-  margin-bottom: 1rem;
-}
-
-.bg-lightBackground {
-  @apply bg-white;
-}
-
-.text-lightText {
-  @apply text-black;
-}
-
-.dark:bg-darkBackground {
-  @apply bg-gray-900;
-}
-
-.dark:text-darkText {
-  @apply text-white;
+  @apply mb-6 rounded-lg;
 }
 
 hr {
-  margin-bottom: 1rem;
-  color: rgba(69, 123, 157, 0.3);
-  border-color: rgba(69, 123, 157, 0.3);
+  @apply my-8 border-moss-200 dark:border-midnight-700;
 }
 
-blockquote {
-  @apply border-l-4 border-gray-300 pl-4 italic text-gray-700;
-}
-
-.dark blockquote {
-  @apply border-gray-600 text-gray-300;
-}
-
-.glossary-entry {
-  border-left: 4px solid #b3e5fc;
-  padding-left: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-.glossary-entry:hover {
-  background-color: #f9f9f9;
-  border-left-color: #4fc3f7;
-  transition: border-left-color 0.2s ease;
-}
-
-.blog-mirror ul li, .blog-mirror ol li {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.blog-mirror li img {
-  width: 100px;
-  float: left;
-  margin-right: 10px;
-}
-
-.blog-mirror li p {
-  display: flex;
-  align-items: flex-start;
-}
-
-.meta-insertion {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-}
-
-.meta-insertion .author {
-  color: #374151;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.meta-insertion .date {
-  color: #9ca3af;
-  font-size: 0.875rem;
-}
-
-.meta-insertion img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 9999px;
-  margin-right: 1rem;
-}
-
+/* Blog entry specific styling */
 .blog-entry {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.blog-entry p,
-.blog-entry h1,
-.blog-entry h2,
-.blog-entry h3,
-.blog-entry h4,
-.blog-entry ul,
-.blog-entry ol,
-.blog-entry blockquote {
-  margin-bottom: 2rem;
-}
-
-.blog-entry p {
-  line-height: 1.8;
-  font-size: 1.125rem;
+  @apply max-w-3xl mx-auto px-6 lg:px-8 py-12;
 }
 
 .blog-entry h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+  @apply text-4xl lg:text-5xl font-bold mb-8 text-gray-800 dark:text-parchment-100;
 }
 
 .blog-entry h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 0.5rem;
+  @apply text-2xl lg:text-3xl font-semibold mb-6 text-gray-700 dark:text-parchment-200 border-b border-moss-200 dark:border-midnight-700 pb-2;
 }
 
 .blog-entry h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid #f3f4f6;
-  padding-bottom: 0.25rem;
+  @apply text-xl lg:text-2xl font-semibold mb-4 text-gray-700 dark:text-parchment-200;
 }
 
 .blog-entry h4 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  @apply text-lg lg:text-xl font-semibold mb-3 text-gray-700 dark:text-parchment-200;
 }
 
-/* Remove bullets and spacing for tag cloud lists */
+.blog-entry p {
+  @apply text-lg leading-relaxed mb-6 text-gray-600 dark:text-parchment-300;
+}
+
+/* Meta information styling */
+.meta-insertion {
+  @apply text-sm text-gray-500 dark:text-parchment-400 mb-6 flex items-center space-x-4 p-4 bg-parchment-100/50 dark:bg-midnight-900/30 rounded-lg border border-moss-200/50 dark:border-midnight-700/50;
+}
+
+.meta-insertion .author {
+  @apply text-gray-700 dark:text-parchment-200 font-semibold;
+}
+
+.meta-insertion .date {
+  @apply text-gray-500 dark:text-parchment-400;
+}
+
+.meta-insertion img {
+  @apply w-12 h-12 rounded-full border-2 border-moss-300 dark:border-moss-600;
+}
+
+/* Tag cloud styling */
 .tag-cloud,
 .tag-cloud ul,
 .tag-cloud li {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  font-size: 0.875rem;
 }
 
+.tag-cloud li {
+  @apply inline-block mr-2 mb-2;
+}
+
+.tag-cloud a {
+  @apply px-3 py-1 text-sm bg-deep-teal-100 dark:bg-deep-teal-900/30 text-deep-teal-800 dark:text-deep-teal-200 rounded-full no-underline hover:bg-deep-teal-200 dark:hover:bg-deep-teal-800/50 transition-colors duration-200;
+}
+
+/* Excerpt styling */
 .excerpt-image {
-  display: block;
-  float: left;
-  margin-right: 1em;
-  margin-bottom: 0.5em;
-  width: 160px;
-  height: 6rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @apply block float-left mr-4 mb-2 w-40 h-24 bg-cover bg-center bg-no-repeat rounded-lg border border-moss-200 dark:border-midnight-700;
 }
 
 .excerpt,
 .long-excerpt {
   overflow: hidden;
+}
+
+/* Glossary entries */
+.glossary-entry {
+  @apply border-l-4 border-deep-teal-300 dark:border-deep-teal-600 pl-4 mb-8 p-4 bg-deep-teal-50/30 dark:bg-deep-teal-900/10 rounded-r-lg transition-all duration-200;
+}
+
+.glossary-entry:hover {
+  @apply bg-deep-teal-100/50 dark:bg-deep-teal-900/20 border-deep-teal-400 dark:border-deep-teal-500;
+}
+
+/* Blog mirror specific adjustments */
+.blog-mirror ul li, 
+.blog-mirror ol li {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.blog-mirror li img {
+  @apply w-24 h-24 float-left mr-4 mb-2 rounded-lg object-cover;
+}
+
+.blog-mirror li p {
+  @apply flex items-start;
+}
+
+/* Prose styling for long-form content */
+.prose {
+  @apply text-gray-600 dark:text-parchment-300;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  @apply text-gray-800 dark:text-parchment-100;
+}
+
+.prose a {
+  @apply text-burnt-orange-600 dark:text-burnt-orange-400;
+}
+
+.prose blockquote {
+  @apply border-moss-300 dark:border-moss-600 text-gray-700 dark:text-parchment-200;
+}
+
+.prose code {
+  @apply bg-moss-100 dark:bg-midnight-800 text-moss-800 dark:text-moss-200 px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-midnight-900 text-parchment-100 p-4 rounded-lg overflow-x-auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-parchment-100 dark:bg-midnight-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-moss-300 dark:bg-moss-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-moss-400 dark:bg-moss-600;
+}
+
+/* Desaturated hover effects for prism colors */
+.link-burnt-orange:hover {
+  color: #a0522d; /* Desaturated sienna */
+  transition: color 0.3s ease;
+}
+
+.dark .link-burnt-orange:hover {
+  color: #cd853f; /* Lighter sienna for dark mode */
+}
+
+.link-deep-teal:hover {
+  color: #4a9999; /* Desaturated teal */
+  transition: color 0.3s ease;
+}
+
+.dark .link-deep-teal:hover {
+  color: #66b3b3; /* Lighter teal for dark mode */
+}
+
+.link-gold-ochre:hover {
+  color: #b8860b; /* Desaturated gold */
+  transition: color 0.3s ease;
+}
+
+.dark .link-gold-ochre:hover {
+  color: #daa520; /* Lighter gold for dark mode */
 }
